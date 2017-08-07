@@ -2,4 +2,4 @@ jobs:
   main:
     image: node:6
     steps:
-      - test: echo test
+      - test: echo test test
