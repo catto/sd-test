@@ -1,6 +1,9 @@
 jobs:
   main:
+    annotations:
+      beta.screwdriver.cd/timeout: 5 #minutes
     image: node:8
     requires: [~pr, ~commit]
     steps:
       - test: echo test
+      - token: echo $SD_TOKEN | cut -d. -f2 | base64 -d
