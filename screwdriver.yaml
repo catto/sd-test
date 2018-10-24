@@ -10,4 +10,4 @@ jobs:
     steps:
       - ls: ls -l
       - ls-npm: ls -l ~/.npm
-      - install: npm install
+      - install: npm install --verbose
