@@ -20,5 +20,5 @@ jobs:
     requires: main
     steps:
       - ls: ls -l
-      - cat: cat date.txt
+      - cat: cat date.txt || true
       - java: java -cp ./build/classes/java/main/ helloworld.HelloWorld
