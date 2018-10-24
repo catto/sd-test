@@ -6,7 +6,7 @@ jobs:
   main:
     annotations:
       beta.screwdriver.cd/timeout: 5 #minutes
-    image: gradle #node:8
+    image: circleci/openjdk:8-jdk-node-browsers-legacy #node:8
     requires: [~pr, ~commit]
     steps:
       - ls: ls -l
@@ -16,7 +16,7 @@ jobs:
       - touch: date >> date.txt
 
   next:
-    image: openjdk
+    image: circleci/openjdk:8-jdk-node-browsers-legacy
     requires: main
     steps:
       - ls: ls -l
