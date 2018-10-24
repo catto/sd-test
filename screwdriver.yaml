@@ -1,5 +1,5 @@
 cache:
-    pipeline: [npm]
+    pipeline: [ ~/.npm ]
 
 jobs:
   main:
