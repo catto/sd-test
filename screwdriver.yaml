@@ -1,5 +1,6 @@
 cache:
     pipeline: [ ~/.npm ]
+    event: [.]
 
 jobs:
   main:
@@ -11,3 +12,11 @@ jobs:
       - ls: ls -l
       - ls-npm: ls -l ~/.npm
       - install: npm install --verbose
+      - touch: date >> date.txt
+
+  next:
+    image: node:8
+    requires: main
+    steps:
+      - ls: ls -l
+      - cat: cat date.txt
