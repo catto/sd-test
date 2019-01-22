@@ -7,7 +7,7 @@ jobs:
     annotations:
       beta.screwdriver.cd/timeout: 5 #minutes
     #image: circleci/openjdk:8-jdk-node-browsers-legacy #node:8
-    image: nonexistent-foobar
+    image: node:8
     requires: [~pr, ~commit]
     steps:
       - ls: ls -l
