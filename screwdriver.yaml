@@ -11,6 +11,7 @@ jobs:
     requires: [~pr, ~commit]
     steps:
       - ls: ls -l
+      - yarn: yarn cache dir
       #- ls-npm: ls -l ~/.npm
       #- install: npm install --verbose
       - gradle: gradle build
