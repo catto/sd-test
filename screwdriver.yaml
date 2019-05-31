@@ -16,11 +16,21 @@ jobs:
       #- install: npm install --verbose
       - gradle: gradle build
       - touch: date >> date.txt
-
-  next:
-    image: circleci/openjdk:8-jdk-node-browsers-legacy
-    requires: main
+      
+  main:
+    image: node:8
+    requires: ~commit
     steps:
-      - ls: ls -l
-      - cat: cat date.txt || true
-      - java: java -cp ./build/classes/java/main/ helloworld.HelloWorld
+        - echo: echo ok
+        
+  next:
+    image: node:8
+    requires: [main, detached]
+    steps:
+        - echo: echo ok
+        
+  detached:
+    image: node:8
+    steps:
+        - echo: echo ok
+  
