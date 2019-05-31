@@ -25,7 +25,7 @@ jobs:
         
   next:
     image: node:8
-    requires: [main, detached]
+    requires: [main, approve_deploy]
     steps:
         - echo: echo ok
         
