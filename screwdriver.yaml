@@ -32,5 +32,5 @@ jobs:
   detached:
     image: node:8
     steps:
-        - echo: fail
+        - echo: echo ok
   
